@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0%;
+    background-color: #f0f5f2;
+}
+
+#outerrefbox {
+   
+    padding-top: 70px;
+    padding-bottom: 80px;
+}
+
+.logofam {
+    background-color: #f0f5f2;
+    flex-wrap: wrap;
+    padding-left: 263px;
+
+}
+
+img {
+    padding-left: 50px;
+    padding-top: 80px;
+
+
+}
+
+h2 {
+    margin: 0px;
+}
+
+.fame {
+    
+    background-color: aqua;
+    height: 260px;
+    width: 380px;
+    border-radius: 11px;
+    
+    padding-left:32px;
+}

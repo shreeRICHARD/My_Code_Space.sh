@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+    }
+    #searchBox {
+      width: 100%;
+      max-width: 500px;
+      padding: 10px;
+      font-size: 16px;
+      margin: 20px auto;
+      display: block;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    #results {
+      max-width: 500px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    .item {
+      padding: 8px;
+      border-bottom: 1px solid #eee;
+    }
+    .item:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Search Things</h1>
+  <input type="text" id="searchBox" placeholder="Type to search...">
+  <div id="results"></div>
+
+  <script>
+    const items = [
+      "Apple",
+      "Banana",
+      "Carrot",
+      "Dragonfruit",
+      "Eggplant",
+      "Fig",
+      "Grapes",
+      "Honeydew",
+      "Iceberg Lettuce",
+      "Jackfruit"
+    ];
+
+    const searchBox = document.getElementById('searchBox');
+    const resultsDiv = document.getElementById('results');
+
+    searchBox.addEventListener('input', () => {
+      const query = searchBox.value.toLowerCase();
+      const filtered = items.filter(item => item.toLowerCase().includes(query));
+      resultsDiv.innerHTML = filtered.map(item => `<div class="item">${item}</div>`).join('');
+    });
+  </script>
+
+</body>
+
+</html>
