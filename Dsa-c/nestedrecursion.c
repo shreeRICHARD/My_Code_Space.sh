@@ -1,15 +1,20 @@
-#include<stdio.h>
+#include <stdio.h>
 
-void Nrecursion(int n){
-    if(n>100){
-        return-10;
+int Nfun(int n)
+{
+    if (n > 100)
+    {
+        return(n - 10);
     }
-    else{
-        return Nrecursion(Nrecursion(n + 11));
+    else
+    {
+        return Nfun(Nfun(n + 11));
     }
 }
-
-void main(){
-    printf("%d\n", Nrecursion(96));
-    Nrecursion(96);
+int main()
+{
+    int num;
+    num = Nfun(95);
+    printf("%d\n", num);
+    return 0;
 }
