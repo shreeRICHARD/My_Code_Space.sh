@@ -4,20 +4,16 @@ by redusing no of multiplications */
 
 #include<stdio.h>
 
-int e(int x,int n)
+double e(int x,int n)
 {
-    float s=1;
-
-    for(;n>0;n--)       
-    {
-        s=1+x/n*s;
-        printf("%f\n",s);
-
-    }
-    return s;
+    static double s;
+    if(n==0)
+        return s;
+    s=1+x*s/n;
+    return e(x,n-1);
 }
 int main (){
 
-    printf("%d\n",e(5,10));
+    printf("%f \n",e(2,10));
     return 0;
 }
