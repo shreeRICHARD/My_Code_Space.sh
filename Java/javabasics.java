@@ -1,7 +1,11 @@
-import java.util.Scanner;
+class hello {
 
-public class Main{
-    public static void main(String[]args){
-        
+    
+    public static void main(String a[]) {
+
+        char c = 'a';
+        c++;
+
+        System.out.print(c);
     }
 }
